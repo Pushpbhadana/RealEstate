@@ -13,6 +13,7 @@ const Navbar = () => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     const initialDark = root.classList.contains('dark') || prefersDark
     if (initialDark) root.classList.add('dark')
+    
     const onScroll = () => {
       setCompact(window.scrollY > 12)
     }
