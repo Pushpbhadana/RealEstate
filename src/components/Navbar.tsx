@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Menu, X, } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [compact, setCompact] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const root = document.documentElement
@@ -17,7 +19,6 @@ const Navbar = () => {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
 
   const navLinks = [
     { href: '/about', label: 'About\u00A0Us' },
@@ -34,38 +35,47 @@ const Navbar = () => {
     ? 'md:h-12 md:max-w-5xl md:rounded-3xl md:px-7'
     : 'md:h-16 md:max-w-7xl md:rounded-2xl md:px-6'
 
+  // Check if link is active
+  const isActiveLink = (href: string) => {
+    return location.pathname === href
+  }
+
   return (
     <header className={`fixed top-0 left-0 z-50 w-full sm:px-3 md:left-1/2 md:-translate-x-1/2 md:top-7 md:px-4`}>
       <nav
         className={`mx-auto py-7 flex items-center justify-between border border-neutral-200/70 bg-white/80 shadow-sm backdrop-blur transition-all duration-300 dark:border-neutral-800 dark:bg-neutral-900/70 ${mobileSize} ${desktopSize}`}
       >
         {/* Brand */}
-        <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+        <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
           <img src={logo} alt="brandLogo" className='w-43' />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden items-center gap-1 md:flex">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="rounded-md px-3 py-2 text-sm lg:text-lg font-medium text-neutral-700 transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white dark:focus-visible:ring-neutral-700"
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              className={`rounded-md px-3 py-2 text-sm lg:text-lg font-medium transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white dark:focus-visible:ring-neutral-700 ${
+                isActiveLink(link.href)
+                  ? 'text-neutral-900 bg-neutral-100 dark:text-white dark:bg-neutral-800'
+                  : 'text-neutral-700 dark:text-neutral-300'
+              }`}
             >
-              {l.label}
-            </a>
+              {link.label}
+            </Link>
           ))}
         </div>
 
         {/* Right actions */}
         <div className="flex items-center gap-2">
           
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="hidden rounded-md md:rounded-3xl text-sm lg:text-lg px-3 py-2 bg-black text-gray-100 hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 md:inline-block dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 dark:focus-visible:ring-neutral-700"
           >
             Contact&nbsp;Us
-          </a>
+          </Link>
 
           {/* Mobile menu button */}
           <button
@@ -83,25 +93,29 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="md:hidden">
           <div className={`mx-auto mt-2 w-[calc(100%-1rem)] max-w-7xl space-y-1 rounded-xl border border-neutral-200 bg-white/95 p-3 shadow-sm backdrop-blur transition-all duration-300 dark:border-neutral-800 dark:bg-neutral-900/90`}>
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block rounded-md px-3 py-2 text-sm lg:text-lg font-medium text-neutral-700 transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white dark:focus-visible:ring-neutral-700"
+                className={`block rounded-md px-3 py-2 text-sm lg:text-lg font-medium transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white dark:focus-visible:ring-neutral-700 ${
+                  isActiveLink(link.href)
+                    ? 'text-neutral-900 bg-neutral-100 dark:text-white dark:bg-neutral-800'
+                    : 'text-neutral-700 dark:text-neutral-300'
+                }`}
               >
-                {l.label}
-              </a>
+                {link.label}
+              </Link>
             ))}            
 
             <div className="mt-2 flex items-center gap-2">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="flex-1 rounded-md bg-neutral-900 px-3 py-2 text-center text-sm font-medium text-white shadow-sm transition-colors hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 dark:focus-visible:ring-neutral-700"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

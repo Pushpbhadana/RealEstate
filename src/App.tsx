@@ -13,9 +13,9 @@ import Contact from './pages/Contact'
 const App = () => {
   return (
     <>
+        <BrowserRouter>
       <Navbar />
       <div>
-        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -25,9 +25,9 @@ const App = () => {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </BrowserRouter>
       </div>
       <Footer />
+        </BrowserRouter>
     </>
   )
 }
