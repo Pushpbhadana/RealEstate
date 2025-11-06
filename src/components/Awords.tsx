@@ -16,7 +16,7 @@ interface GridItemProps {
   index: number;
 }
 
-const GridItem: React.FC<GridItemProps> = ({ image, title, size, index }) => {
+const GridItem: React.FC<GridItemProps> = ({ image, title, index }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const itemRef = useRef<HTMLDivElement>(null);

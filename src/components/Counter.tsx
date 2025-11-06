@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Beer, Heart, Anchor, Users } from "lucide-react";
 
 interface CounterProps {
