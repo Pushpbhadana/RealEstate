@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/carousel"
 
 
-import Img1 from '../assets/images/p1.jpg'
+import Img1 from '../../assets/images/p1.jpg'
 
 const ProjectsSection = () => {
   return (

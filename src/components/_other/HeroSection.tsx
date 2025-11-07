@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import bg1 from "../assets/images/bg1.jpg";
-import bg2 from "../assets/images/bg2.jpg";
+import bg1 from "../../assets/images/bg1.jpg";
+import bg2 from "../../assets/images/bg2.jpg";
 
 const Hero: React.FC = () => {
   const slides = [

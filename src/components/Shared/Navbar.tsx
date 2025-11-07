@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react' 
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../assets/images/logo.png'
+import logo from '../../assets/images/logo.png'
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -44,10 +44,10 @@ const Navbar = () => {
   return (
     <header className={`fixed top-0 left-0 z-50 w-full sm:px-3 md:left-1/2 md:-translate-x-1/2 md:top-7 md:px-4`}>
       <nav
-        className={`mx-auto py-7 flex items-center justify-between border border-neutral-200/70 bg-white/80 shadow-sm backdrop-blur transition-all duration-300 dark:border-neutral-800 dark:bg-neutral-900/70 ${mobileSize} ${desktopSize}`}
+        className={`mx-auto py-7 flex items-center justify-between border border-neutral-200/70 bg-white/80 shadow-sm backdrop-blur transition-all duration-300 ${mobileSize} ${desktopSize}`}
       >
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+        <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight text-neutral-900 ">
           <img src={logo} alt="brandLogo" className='w-43' />
         </Link>
 
@@ -57,10 +57,10 @@ const Navbar = () => {
             <Link
               key={link.href}
               to={link.href}
-              className={`rounded-md px-3 py-2 text-sm lg:text-lg font-medium transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white dark:focus-visible:ring-neutral-700 ${
+              className={`rounded-md px-3 py-2 text-sm lg:text-lg font-medium transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300   ${
                 isActiveLink(link.href)
-                  ? 'text-neutral-900 bg-neutral-100 dark:text-white dark:bg-neutral-800'
-                  : 'text-neutral-700 dark:text-neutral-300'
+                  ? 'text-neutral-900 bg-neutral-100 '
+                  : 'text-neutral-700 '
               }`}
             >
               {link.label}
@@ -73,7 +73,7 @@ const Navbar = () => {
           
           <Link
             to="/contact"
-            className="hidden rounded-md md:rounded-3xl text-sm lg:text-lg px-3 py-2 bg-black text-gray-100 hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 md:inline-block dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 dark:focus-visible:ring-neutral-700"
+            className="hidden rounded-md md:rounded-3xl text-sm lg:text-lg px-3 py-2 bg-black text-gray-100 hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 md:inline-block"
           >
             Contact&nbsp;Us
           </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-neutral-700 shadow-sm transition-colors hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 md:hidden dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus-visible:ring-neutral-700"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-neutral-700 shadow-sm transition-colors hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 md:hidden  "
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -93,16 +93,16 @@ const Navbar = () => {
       {/* Mobile dropdown */}
       {mobileOpen && (
         <div className="md:hidden">
-          <div className={`mx-auto mt-2 w-[calc(100%-1rem)] max-w-7xl space-y-1 rounded-xl border border-neutral-200 bg-white/95 p-3 shadow-sm backdrop-blur transition-all duration-300 dark:border-neutral-800 dark:bg-neutral-900/90`}>
+          <div className={`mx-auto mt-2 w-[calc(100%-1rem)] max-w-7xl space-y-1 rounded-xl border border-neutral-200 bg-white/95 p-3 shadow-sm backdrop-blur transition-all duration-300 `}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`block rounded-md px-3 py-2 text-sm lg:text-lg font-medium transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white dark:focus-visible:ring-neutral-700 ${
+                className={`block rounded-md px-3 py-2 text-sm lg:text-lg font-medium transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300   ${
                   isActiveLink(link.href)
-                    ? 'text-neutral-900 bg-neutral-100 dark:text-white dark:bg-neutral-800'
-                    : 'text-neutral-700 dark:text-neutral-300'
+                    ? 'text-neutral-900 bg-neutral-100'
+                    : 'text-neutral-700 '
                 }`}
               >
                 {link.label}
@@ -113,7 +113,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="flex-1 rounded-md bg-neutral-900 px-3 py-2 text-center text-sm font-medium text-white shadow-sm transition-colors hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 dark:focus-visible:ring-neutral-700"
+                className="flex-1 rounded-md bg-neutral-900 px-3 py-2 text-center text-sm font-medium text-white shadow-sm transition-colors hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 "
               >
                 Contact Us
               </Link>

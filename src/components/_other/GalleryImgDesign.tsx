@@ -1,4 +1,4 @@
-import Masonry from '../components/ui/Masonry';
+import Masonry from '../ui/Masonry';
 
 
 const GalleryImgDesign = () => {

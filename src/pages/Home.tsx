@@ -1,13 +1,13 @@
-import CounterSection from '@/components/Counter'
-import HeroSection from '../components/HeroSection'
-import WhyChooseUs from '@/components/Why'
-import Cofunders from '@/components/Profile'
-import WorkPro from '@/components/WorkPro'
-import Awords from '@/components/Awords'
-import TestimonialsSection from '@/components/Testimonial'
-import Partners from '@/components/Partners'
-import ProjectsSection from '@/components/ProjectsSection'
-import ContactForm from '@/components/ContactForm'
+import CounterSection from '@/components/_other/Counter'
+import HeroSection from '../components/_other/HeroSection'
+import WhyChooseUs from '@/components/_other/Why'
+import Cofunders from '@/components/_other/Profile'
+import WorkPro from '@/components/_other/WorkPro'
+import Awords from '@/components/_other/Awords'
+import TestimonialsSection from '@/components/_other/Testimonial'
+import Partners from '@/components/_other/Partners'
+import ProjectsSection from '@/components/_other/ProjectsSection'
+import ContactForm from '@/components/_other/ContactForm'
 
 const Home = () => {
 

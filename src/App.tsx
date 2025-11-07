@@ -1,5 +1,5 @@
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import Footer from './components/Shared/Footer'
+import Navbar from './components/Shared/Navbar'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { About, Home, Commercial, Residential, ComingSoon, Gallery, Contact } from './pages/index';

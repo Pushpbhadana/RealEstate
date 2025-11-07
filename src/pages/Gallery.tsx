@@ -1,4 +1,4 @@
-import GalleryImgDesign from "../components/GalleryImgDesign";
+import GalleryImgDesign from "../components/_other/GalleryImgDesign";
 import aboutImg from "../assets/images/aboutcover.jpg";
 const Gallery = () => {
 

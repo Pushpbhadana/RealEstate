@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import Avatar1 from "../assets/images/cofounder.jpg";
-import Avatar2 from "../assets/images/cofounder2.jpg";
+import Avatar1 from "../../assets/images/cofounder.jpg";
+import Avatar2 from "../../assets/images/cofounder2.jpg";
 
 type ProfileCardProps = {
   name: string;

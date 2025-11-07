@@ -5,20 +5,20 @@ import {
   CarouselItem
 } from "@/components/ui/carousel"
 
-import Partner1 from '../assets/images/1.png'
-import Partner2 from '../assets/images/2.png'
-import Partner3 from '../assets/images/3.png'
-import Partner4 from '../assets/images/4.png'
-import Partner5 from '../assets/images/5.png'
-import Partner6 from '../assets/images/6.jpg'
-import Partner7 from '../assets/images/7.png'
-import Partner8 from '../assets/images/8.png'
-import Partner9 from '../assets/images/9.jpg'
-import Partner10 from '../assets/images/10.png'
-import Partner11 from '../assets/images/11.png'
-import Partner12 from '../assets/images/12.png'
-import Partner13 from '../assets/images/13.png'
-import Partner14 from '../assets/images/14.png'
+import Partner1 from '../../assets/images/1.png'
+import Partner2 from '../../assets/images/2.png'
+import Partner3 from '../../assets/images/3.png'
+import Partner4 from '../../assets/images/4.png'
+import Partner5 from '../../assets/images/5.png'
+import Partner6 from '../../assets/images/6.jpg'
+import Partner7 from '../../assets/images/7.png'
+import Partner8 from '../../assets/images/8.png'
+import Partner9 from '../../assets/images/9.jpg'
+import Partner10 from '../../assets/images/10.png'
+import Partner11 from '../../assets/images/11.png'
+import Partner12 from '../../assets/images/12.png'
+import Partner13 from '../../assets/images/13.png'
+import Partner14 from '../../assets/images/14.png'
 
 const Partners = () => {
   return (

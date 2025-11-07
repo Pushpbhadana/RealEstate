@@ -87,7 +87,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] "
             key={item.name}
           >
             <blockquote>
@@ -100,12 +100,12 @@ export const InfiniteMovingCards = ({
                   <span className="text-lg lg:text-xl text-gray-900 mb-2 lg:mb-3">
                     {item.title}
                   </span>
-                  <span className="text-lg lg:text-lg font-semibold text-gray-900 mb-2 lg:mb-3">
+                  <span className="text-lg lg:text-lg font-semibold text-gray-900 mb-2 lg:mb-3 ">
                     {item.name}
                   </span>
                 </span>
               </div>
-              <div className="relative z-20 text-sm lg:text-base lg:text-lg leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">
+              <div className="relative z-20 text-sm lg:text-base lg:text-lg leading-[1.6] font-normal text-neutral-800">
                 {item.quote}
               </div>
               

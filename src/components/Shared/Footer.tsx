@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/images/logo.png";
+import logo from "../../assets/images/logo.png";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-10 pb-6 px-4 sm:px-8 md:px-16 rounded-t-3xl lg:rounded-4xl lg:m-2">
@@ -29,11 +29,11 @@ const Footer: React.FC = () => {
         <nav>
           <h3 className="text-xl font-semibold mb-4 text-white">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white transition">Home</a></li>
-            <li><a href="#" className="hover:text-white transition">About Us</a></li>
-            <li><a href="#" className="hover:text-white transition">Gallery</a></li>
-            <li><a href="#" className="hover:text-white transition">Blog / News</a></li>
-            <li><a href="#" className="hover:text-white transition">Contact Us</a></li>
+            <li><a href="/" className="hover:text-white transition">Home</a></li>
+            <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+            <li><a href="/gallery" className="hover:text-white transition">Gallery</a></li>
+            <li><a href="/blog" className="hover:text-white transition">Blog / News</a></li>
+            <li><a href="/contact" className="hover:text-white transition">Contact Us</a></li>
           </ul>
         </nav>
 
@@ -41,10 +41,10 @@ const Footer: React.FC = () => {
         <nav>
           <h3 className="text-xl font-semibold mb-4 text-white">Properties</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white transition">Commercial Projects</a></li>
-            <li><a href="#" className="hover:text-white transition">Residential Projects</a></li>
-            <li><a href="#" className="hover:text-white transition">Coming Soon</a></li>
-            <li><a href="#" className="hover:text-white transition">Plots</a></li>
+            <li><a href="/commercial" className="hover:text-white transition">Commercial Projects</a></li>
+            <li><a href="/residential" className="hover:text-white transition">Residential Projects</a></li>
+            <li><a href="/coming-soon" className="hover:text-white transition">Coming Soon</a></li>
+            <li><a href="/plots" className="hover:text-white transition">Plots</a></li>
           </ul>
         </nav>
 
@@ -52,11 +52,11 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4 text-white">Follow us</h3>
           <ul className="space-y-2">
-            <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Facebook</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">X (Formerly Twitter)</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Youtube</a></li>
+            <li><a href="https://www.instagram.com/shopertyy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a></li>
+            <li><a href="https://www.facebook.com/shopertyy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Facebook</a></li>
+            <li><a href="https://x.com/shopertyy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">X (Formerly Twitter)</a></li>
+            <li><a href="https://www.linkedin.com/company/shopertyy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@shopertyy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Youtube</a></li>
           </ul>
         </div>
 
