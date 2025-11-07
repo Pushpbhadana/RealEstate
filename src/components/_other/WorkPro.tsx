@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 type WorkStepProps = {
   number: string;
@@ -57,6 +58,7 @@ const WorkStep: React.FC<WorkStepProps> = ({ number, title, description, index }
 };
 
 export const HowWeWork: React.FC = () => {
+  const navigate = useNavigate();
   const workSteps = [
     {
       number: "1",
@@ -112,7 +114,7 @@ export const HowWeWork: React.FC = () => {
 
       {/* CTA Section */}
       <div className="text-center mt-8 lg:mt-16">
-        <button className="px-6 py-3 lg:px-8 lg:py-4 bg-white text-gray-800 text-base lg:text-lg font-medium rounded-full hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-300 hover:border-black flex items-center gap-2 lg:gap-3 group mx-auto">
+        <button  onClick={() => navigate('/contact')} className="px-6 py-3 lg:px-8 lg:py-4 bg-white text-gray-800 text-base lg:text-lg font-medium rounded-full hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-300 hover:border-black flex items-center gap-2 lg:gap-3 group mx-auto">
           Start Your Journey Today
           <svg className="w-4 h-4 lg:w-5 lg:h-5 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Avatar1 from "../../assets/images/cofounder.jpg";
 import Avatar2 from "../../assets/images/cofounder2.jpg";
+import { useNavigate } from "react-router-dom";
 
 type ProfileCardProps = {
   name: string;
@@ -20,6 +21,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -130,6 +132,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
             <div className="flex flex-wrap gap-2 lg:gap-4 mt-6 lg:mt-12 justify-center lg:justify-start">
               {["LinkedIn", "Contact", "Portfolio", "Schedule Meeting"].map((platform) => (
                 <button
+                  onClick={() => navigate('/contact')}
                   key={platform}
                   className="px-3 py-2 lg:px-6 lg:py-3 bg-white text-gray-800 text-xs lg:text-sm font-medium rounded-full hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-md lg:shadow-lg hover:shadow-xl border border-gray-300 hover:border-black flex items-center gap-1 lg:gap-2 group flex-nowrap whitespace-nowrap"
                 >

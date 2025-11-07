@@ -8,6 +8,7 @@ import Image4 from "../../assets/images/awd4.jpg";
 import Image5 from "../../assets/images/awd5.jpeg";
 import Image6 from "../../assets/images/awd6.jpg";
 import Image7 from "../../assets/images/awd7.jpg";
+import { useNavigate } from "react-router-dom";
 
 interface GridItemProps {
   image: string;
@@ -80,6 +81,7 @@ const GridItem: React.FC<GridItemProps> = ({ image, title, index }) => {
 };
 
 export const ImageGrid: React.FC = () => {
+  const navigate = useNavigate();
   const gridItems = [
     {
       image: Image1,
@@ -193,7 +195,7 @@ export const ImageGrid: React.FC = () => {
 
       {/* CTA Section */}
       <div className="text-center mt-8 md:mt-12 lg:mt-16">
-        <button className="px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 bg-white text-gray-800 text-sm md:text-base lg:text-lg font-medium rounded-full hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-300 hover:border-black flex items-center gap-2 lg:gap-3 group mx-auto">
+        <button  onClick={() => navigate('/about')} className="px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 bg-white text-gray-800 text-sm md:text-base lg:text-lg font-medium rounded-full hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-300 hover:border-black flex items-center gap-2 lg:gap-3 group mx-auto">
           View All
           <svg className="w-4 h-4 lg:w-5 lg:h-5 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
