@@ -18,6 +18,10 @@ import {
 } from "@/components/ui/form";
 import { Send, Mail, Phone, User } from "lucide-react";
 
+// Initialize EmailJS (you'll need to install the package)
+// npm install @emailjs/browser
+import emailjs from '@emailjs/browser';
+
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
@@ -26,6 +30,13 @@ const formSchema = z.object({
 });
 
 type FormData = z.infer<typeof formSchema>;
+
+// EmailJS configuration - REPLACE WITH YOUR ACTUAL CREDENTIALS
+const EMAILJS_CONFIG = {
+  SERVICE_ID: "service_65syihu", 
+  TEMPLATE_ID: "template_hw5cec2", 
+  PUBLIC_KEY: "oiZ77Da9QKuRl-j_y", 
+};
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,15 +56,27 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      // Initialize EmailJS with your public key
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
 
-      if (response.ok) {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        mobile: data.mobile,
+        message: data.message,
+        to_name: "Real Estate Advisor",
+        reply_to: data.email,
+      };
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      );
+
+      if (result.status === 200) {
         setIsSubmitted(true);
         form.reset();
       } else {
@@ -69,9 +92,9 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4">
+      <div className="h-1/2 bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center">
+          <div className="text-center ">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Send className="w-8 h-8 text-green-600" />
             </div>
@@ -81,7 +104,7 @@ export default function ContactForm() {
             <p className="text-gray-600 mb-8">
               Thank you for reaching out. We&apos;ll get back to you soon.
             </p>
-            <Button onClick={() => setIsSubmitted(false)}>
+            <Button onClick={() => setIsSubmitted(false)} className="px-6 py-10  bg-white text-gray-800 text-sm md:text-base lg:text-lg font-medium rounded-full hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-300 hover:border-black flex items-center gap-2 lg:gap-3 group mx-auto">
               Send Another Message
             </Button>
           </div>
@@ -219,7 +242,6 @@ export default function ContactForm() {
               </Form>
             </CardContent>
           </Card>   
-
         </div>
       </div>
     </div>
