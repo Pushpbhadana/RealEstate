@@ -2,13 +2,7 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import About from './pages/About'
-import Home from './pages/Home'
-import Commercial from './pages/Commercial'
-import Residential from './pages/Residential'
-import ComingSoon from './pages/ComingSoon'
-import Gallery from './pages/Gallery'
-import Contact from './pages/Contact'
+import { About, Home, Commercial, Residential, ComingSoon, Gallery, Contact } from './pages/index';
 
 const App = () => {
   return (
