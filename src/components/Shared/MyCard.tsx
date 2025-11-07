@@ -1,4 +1,3 @@
-import React from 'react';
 import TiltedCard from '../ui/TiltedCard'; // Adjust import path as needed
 
 interface CardData {

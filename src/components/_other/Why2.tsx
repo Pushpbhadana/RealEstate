@@ -2,10 +2,7 @@ import React from "react";
 import {
   Award,
   Target,
-  TrendingUp,
-  Handshake,
-  Network,
-  HeartHandshake,
+  TrendingUp
 } from "lucide-react";
 
 interface FeatureCardProps {
