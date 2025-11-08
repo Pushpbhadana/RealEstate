@@ -8,7 +8,7 @@ const Details = () => {
     return (
         <>
             {/* Hero Section */}
-            <div className="min-h-[calc(90vh-5rem)] mx-2 my-4 sm:m-2 rounded-3xl sm:rounded-4xl relative">
+            <div className="min-h-[calc(90vh-5rem)] mx-2 my-4 md:pt-12 lg:pt-17 sm:m-2 rounded-3xl sm:rounded-4xl relative">
                 {/* Background Image Div */}
                 <div
                     className="absolute inset-0 bg-cover bg-center rounded-3xl sm:rounded-4xl bg-no-repeat"
@@ -49,7 +49,7 @@ const Details = () => {
             {/* Hero Section End */}
 
             {/* About Section */}
-            <div className="min-h-auto lg:min-h-[calc(90vh-5rem)] mx-2 my-4 sm:m-2 rounded-3xl sm:rounded-4xl relative bg-white">
+            <div className="min-h-auto lg:min-h-[calc(90vh-5rem)] mx-2 my-4 sm:m-2 rounded-3xl sm:rounded-4xl relative">
                 <div className="relative z-10 min-h-auto py-8 lg:py-0 lg:min-h-[calc(90vh-5rem)] flex items-center justify-center p-4 sm:p-6 lg:p-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center w-full max-w-8xl gap-8 lg:gap-12 xl:gap-16">
 
@@ -145,20 +145,18 @@ const Details = () => {
             </div>
 
             {/* Magic Bento Section */}
-            <div className="mx-2 my-4 sm:m-2">
-                <MagicBento
-                    textAutoHide={true}
-                    enableStars={true}
-                    enableSpotlight={true}
-                    enableBorderGlow={true}
-                    enableTilt={true}
-                    enableMagnetism={true}
-                    clickEffect={true}
-                    spotlightRadius={300}
-                    particleCount={12}
-                    glowColor="132, 0, 255"
-                />
-            </div>
+            <MagicBento
+                textAutoHide={true}
+                enableStars={true}
+                enableSpotlight={true}
+                enableBorderGlow={true}
+                enableTilt={true}
+                enableMagnetism={true}
+                clickEffect={true}
+                spotlightRadius={300}
+                particleCount={12}
+                glowColor="132, 0, 255"
+            />
 
             {/* CTA Section */}
             <div className="h-auto lg:h-[calc(70vh-5rem)] mx-2 my-4 sm:m-2 rounded-3xl sm:rounded-4xl relative">
