@@ -2,7 +2,7 @@ import Footer from './components/Shared/Footer'
 import Navbar from './components/Shared/Navbar'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { About, Home, Commercial, Residential, ComingSoon, Gallery, Contact } from './pages/index';
+import { About, Home, Commercial, Residential, ComingSoon, Gallery, Contact, Details } from './pages/index';
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
             <Route path="/coming-soon" element={<ComingSoon />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/details" element={<Details />} />
           </Routes>
       </div>
       <Footer />

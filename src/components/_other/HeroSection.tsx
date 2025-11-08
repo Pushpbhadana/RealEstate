@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="relative h-screen overflow-hidden select-none m-2 rounded-4xl"
+      className="relative h-[calc(100vh-0.8rem)] overflow-hidden select-none m-2 rounded-4xl"
       onMouseDown={handleDragStart}
       onMouseUp={handleDragEnd}
       onMouseLeave={handleDragEnd}

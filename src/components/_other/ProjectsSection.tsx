@@ -91,6 +91,14 @@ const ProjectsSection = () => {
                                 </svg>
                                 {project.location}
                               </div>
+                              <a href="/commercial">  
+                              <button className="cursor-pointer mt-3 py-2 px-4 bg-white text-gray-800 text-xs lg:text-sm font-medium rounded-full hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-md lg:shadow-lg hover:shadow-xl border border-gray-300 hover:border-black flex items-center gap-1 lg:gap-2 group flex-nowrap whitespace-nowrap">
+                                
+                                <span className="truncate">View Details</span>
+                                <svg className="w-3 h-3 lg:w-4 lg:h-4 transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                
+                              </button>
+                              </a>
                             </div>
 
                             {/* Hover Action */}
@@ -135,7 +143,7 @@ const ProjectsSection = () => {
               <CarouselContent className="-ml-2 md:-ml-4">
                 {[
                   {
-                    image: "https://images.unsplash.com/photo-1600585154340-ffffd44efebf?w=600&h=600&fit=crop",
+                    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=600&fit=crop",
                     name: "Serenity Heights",
                     location: "Hillside District",
                     type: "Luxury Apartments"
@@ -192,6 +200,15 @@ const ProjectsSection = () => {
                                 </svg>
                                 {project.location}
                               </div>
+
+                              <a href="/residential">
+                              <button className="cursor-pointer mt-3 py-2 px-4 bg-white text-gray-800 text-xs lg:text-sm font-medium rounded-full hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-md lg:shadow-lg hover:shadow-xl border border-gray-300 hover:border-black flex items-center gap-1 lg:gap-2 group flex-nowrap whitespace-nowrap">
+                                
+                                <span className="truncate">View Details</span>
+                                <svg className="w-3 h-3 lg:w-4 lg:h-4 transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                
+                              </button>
+                              </a>
                             </div>
 
                             {/* Hover Action */}

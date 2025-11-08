@@ -47,7 +47,7 @@ const testimonials = [
     {
         quote:
             "I booked my desired property with the courteous support of the team of Shopertyy. I am grateful and happy with their customer service and looking forward to forming a long & strong relationship with Shopertyy.",
-        name: "Mr. Karun Jalali",
+        name: "Mr. Karunn Jalali",
         title: "Grateful and happy with their customer service",
     },
 
