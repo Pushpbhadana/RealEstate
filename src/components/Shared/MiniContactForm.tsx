@@ -218,7 +218,7 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
               {/* Submit Button */}
               <Button 
                 type="submit" 
-                className="w-full bg-white text-gray-800 text-sm font-medium rounded-full hover:bg-black hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl border border-white hover:border-black flex items-center justify-center gap-2 py-2"
+                className="w-full bg-white text-gray-800 text-sm font-medium rounded-lg hover:bg-black hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl border border-white hover:border-black flex items-center justify-center gap-2 py-2"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
