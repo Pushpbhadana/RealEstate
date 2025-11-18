@@ -13,7 +13,6 @@ import elan from '../../assets/images/Elanbg.webp'
 import m3mRoute65 from '../../assets/images/m3m65.jpg'
 import m3m57 from '../../assets/images/m3m57.jpg'
 
-import m3mParagon from '../../assets/images/m3mparagon.jpg'
 import m3mCrown from '../../assets/images/m3mCrown.jpg'
 import dxp from '../../assets/images/Dxp.jpg'
 import pyramid from '../../assets/images/pyramind.png'
