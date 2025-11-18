@@ -7,6 +7,17 @@ import {
 
 
 import Img1 from '../../assets/images/p1.jpg'
+import omxState from '../../assets/images/omaxeState.png'
+import spj from '../../assets/images/spr.png'
+import elan from '../../assets/images/Elanbg.webp'
+import m3mRoute65 from '../../assets/images/m3m65.jpg'
+import m3m57 from '../../assets/images/m3m57.jpg'
+
+import m3mParagon from '../../assets/images/m3mparagon.jpg'
+import m3mCrown from '../../assets/images/m3mCrown.jpg'
+import dxp from '../../assets/images/Dxp.jpg'
+import pyramid from '../../assets/images/pyramind.png'
+import golfc from '../../assets/images/m3mGolf.png'
 
 const ProjectsSection = () => {
   return (
@@ -34,37 +45,37 @@ const ProjectsSection = () => {
               <CarouselContent className="-ml-2 md:-ml-4">
                 {[
                   {
-                    image: Img1,
-                    name: "Skyline Business Center",
-                    location: "Downtown District",
-                    type: "Office Complex"
+                    image: omxState,
+                    name: "OMAXE State",
+                    location: "Sec 16 Gurugram",
+                    type: ""
                   },
                   {
-                    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=600&fit=crop",
-                    name: "Commerce Plaza",
-                    location: "Financial Quarter",
+                    image: spj,
+                    name: "Vedantam",
+                    location: "Sec 48 Gurugram",
                     type: "Mixed-Use"
                   },
                   {
-                    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=600&fit=crop",
-                    name: "Innovation Hub",
-                    location: "Tech Park",
+                    image: elan,
+                    name: "Elan Imperial",
+                    location: "Sec 56 Gurugram",
                     type: "Co-working Space"
                   },
                   {
-                    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=600&fit=crop",
-                    name: "Riverside Towers",
-                    location: "Waterfront",
+                    image: m3mRoute65,
+                    name: "M3M Route 65",
+                    location: "Sec 16 Gurugram",
                     type: "Office & Retail"
                   },
                   {
-                    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=600&fit=crop",
-                    name: "Metropolitan Square",
-                    location: "City Center",
+                    image: m3m57,
+                    name: "M3M 57",
+                    location: "Sec 59 Gurugram",
                     type: "Commercial Complex"
                   }
                 ].map((project, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
                       <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full group">
                         <CardContent className="flex aspect-[4/5] items-center justify-center p-0 overflow-hidden relative">
@@ -77,12 +88,12 @@ const ProjectsSection = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                             {/* Content Overlay */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                              <div className="mb-2">
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white bg-black/40">
+                              {/* <div className="mb-2">
                                 <span className="inline-block px-2 py-1 text-xs font-medium bg-emerald-600 rounded-full">
                                   {project.type}
                                 </span>
-                              </div>
+                              </div> */}
                               <h3 className="text-xl font-bold mb-1">{project.name}</h3>
                               <div className="flex items-center text-slate-200 text-sm">
                                 <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -143,37 +154,37 @@ const ProjectsSection = () => {
               <CarouselContent className="-ml-2 md:-ml-4">
                 {[
                   {
-                    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=600&fit=crop",
-                    name: "Serenity Heights",
-                    location: "Hillside District",
+                    image: Img1,
+                    name: "The Edition",
+                    location: "Sec 16 Gurugram",
                     type: "Luxury Apartments"
                   },
                   {
-                    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=600&fit=crop",
-                    name: "Parkside Residences",
-                    location: "Central Park",
+                    image: m3mCrown,
+                    name: "M3M Crown",
+                    location: "Dwarka Delhi",
                     type: "Condominiums"
                   },
                   {
-                    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=600&fit=crop",
-                    name: "Waterfront Villas",
-                    location: "Lake District",
+                    image: dxp,
+                    name: "DXP",
+                    location: "Sec 10 Gurugram",
                     type: "Luxury Villas"
                   },
                   {
-                    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=600&fit=crop",
-                    name: "Urban Lofts",
-                    location: "Arts District",
+                    image: pyramid,
+                    name: "Pyramid",
+                    location: "Sec 56 Gurugram",
                     type: "Modern Lofts"
                   },
                   {
-                    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=600&fit=crop",
-                    name: "Garden Estates",
-                    location: "Suburban Area",
+                    image: golfc,
+                    name: "Golf Course Estates",
+                    location: "Sec 53 Gurugram",
                     type: "Townhouses"
                   }
                 ].map((project, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
                       <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full group">
                         <CardContent className="flex aspect-[4/5] items-center justify-center p-0 overflow-hidden relative">
@@ -186,12 +197,12 @@ const ProjectsSection = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                             {/* Content Overlay */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                              <div className="mb-2">
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white bg-black/40">
+                              {/* <div className="mb-2">
                                 <span className="inline-block px-2 py-1 text-xs font-medium bg-emerald-600 rounded-full">
                                   {project.type}
                                 </span>
-                              </div>
+                              </div> */}
                               <h3 className="text-xl font-bold mb-1">{project.name}</h3>
                               <div className="flex items-center text-slate-200 text-sm">
                                 <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

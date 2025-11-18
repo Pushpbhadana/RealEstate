@@ -1,46 +1,44 @@
 // pages/project1.tsx
 import ProjectDetailsPage from "@/components/Shared/ProjectDetailsPage";
-import project1Image from "../../assets/images/omxChk.jpg";
-import project1Image2 from "../../assets/images/aboutOmexDwarka.webp";
+import project1Image from "../../assets/images/m3mAtrium57Bg.jpg";
+import project1Image2 from "../../assets/images/m3mAtrium57AboutBG.jpg";
 
-import galleryImage1 from "../../assets/images/OmexDwarkag1.png";
-import galleryImage2 from "../../assets/images/OmexDwarkag2.png";
-import galleryImage3 from "../../assets/images/OmexDwarkag3.png";
-import galleryImage4 from "../../assets/images/OmexDwarkag4.png";
-import galleryImage5 from "../../assets/images/OmexDwarkag5.png";
-import galleryImage6 from "../../assets/images/OmexDwarkag6.png";
-import galleryImage7 from "../../assets/images/OmexDwarkag7.png";
-import galleryImage8 from "../../assets/images/OmexDwarkag8.png";
+import galleryImage1 from "../../assets/images/m3mAtrium57p1.jpg";
+import galleryImage2 from "../../assets/images/m3mAtrium57p2.jpg";
+import galleryImage3 from "../../assets/images/m3mAtrium57p3.jpg";
+import galleryImage4 from "../../assets/images/m3mAtrium57p4.jpg";
+import galleryImage5 from "../../assets/images/m3mAtrium57p5.jpg";
+import galleryImage6 from "../../assets/images/m3mAtrium57p6.jpg";
 
-import premiumImage1 from "../../assets/images/OmexDwarkap1.webp";
-import premiumImage2 from "../../assets/images/OmexDwarkap2.webp";
-import premiumImage3 from "../../assets/images/OmexDwarkap3.webp";
-import premiumImage4 from "../../assets/images/OmexDwarkap4.webp";
-import premiumImage5 from "../../assets/images/OmexDwarkap5.webp";
-import premiumImage6 from "../../assets/images/OmexDwarkap6.webp";
+import premiumImage1 from "../../assets/images/m3mAtrium57p1.jpg";
+import premiumImage2 from "../../assets/images/m3mAtrium57p2.jpg";
+import premiumImage3 from "../../assets/images/m3mAtrium57p3.jpg";
+import premiumImage4 from "../../assets/images/m3mAtrium57p4.jpg";
+import premiumImage5 from "../../assets/images/m3mAtrium57p5.jpg";
+import premiumImage6 from "../../assets/images/m3mAtrium57p6.jpg";
 
 const M3MAtrium57 = () => {
     const projectData = {
-        projectName: "The Omaxe State",
-        location: "Sec 19B, Dwarka, Delhi",
-        tagline: "Luxury Retail Area & Sports Complex",
-        investmentInfo: "Investment Starts @ ₹75 Lacs*",
+        projectName: "Sector 57, GURUGRAM",
+        location: "M3M ATRIUM 57",
+        tagline: "Retail Shops, Cafes, And Food Courts",
+        investmentInfo: "Price Starts at ₹ 80 Lakhs* onwards",
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
-        aboutTitle: "Commercial Complex By Omaxe Dwarka Delhi",
+        aboutTitle: "Invest in M3M ATRIUM 57",
         features: [
             {
-                title: "Luxury Sports Complex on 50 Acres",
-                description: "50 acres dedicated to upscale commercial sports amenities and facilities."
+                title: "Exclusive Dual-sided Access",
+                description: "Dual-sided access enhances visitor convenience, ensuring seamless entry into the upscale commercial space."
             },
             {
-                title: "International Cricket-Football Stadium",
-                description: "Premier international venue hosting cricket and football matches."
+                title: "World Class Commercial Space",
+                description: "Ground floor boasts triple-height shops whereas 2nd and 3rd floor offers premium space for F& B."
             },
             {
-                title: "India's First Integrated Development",
-                description: "A 5-in-1 Integrated Destination Sports, Shopping, Hospitality, Social & Food"
+                title: "High Residential Catchment",
+                description: "Strategically located on a traffic island with more than 50,000 families in close vicinity."
             },
             {
                 title: "Project RERA No: DLRERA2024P0003",
@@ -48,13 +46,12 @@ const M3MAtrium57 = () => {
             }
         ],
 
-        connectivityTitle: "Robust Connectivity",
+        connectivityTitle: "Location Perks",
         connectivityFeatures: [
-            "Connected to an impressive network of 19 Highways",
-            "Proximity to shopping havens, esteemed educational institutions, and top-notch healthcare facilities.",
-            "Right Opposite to Bharat Vandana Park",
-            "Close to IGI Airports & Dwarka Metro",
-            "Residential catchment of more than 25 Lakhs+ People"
+            "5 Min Golf Course Road | 10 Min Rajiv Chowk",
+            "Less than a min drive from Golf Course Road Extn",
+            "25 Minutes15-minute drive to Medanta, Medicity, Fortis, and Max. drive from IGI Airport",
+            "Located near residential neighborhoods, malls, and entertainment areas.",
         ],
 
         galleryTitle: "The Omaxe State Gallery",
@@ -95,18 +92,7 @@ const M3MAtrium57 = () => {
                 location: "Downtown District",
                 type: "Office Complex"
             },
-            {
-                image: galleryImage7,
-                name: "Skyline Business Center",
-                location: "Downtown District",
-                type: "Office Complex"
-            },
-            {
-                image: galleryImage8,
-                name: "Skyline Business Center",
-                location: "Downtown District",
-                type: "Office Complex"
-            },            
+                      
         ],
 
         ctaTitle: "Why some units make more profit than others? Selection of units is crucial.",

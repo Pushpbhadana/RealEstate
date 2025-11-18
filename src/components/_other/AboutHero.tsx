@@ -11,10 +11,10 @@ const AboutHero = () => {
       title: "2014",
       content: (
         <div>
-          <h3 className="text-lg lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-3 group-hover:text-black transition-colors duration-300 leading-tight dark:text-neutral-200">
+          <h3 className="text-lg lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-3 group-hover:text-black transition-colors duration-300 leading-tight ">
             FOUND NESTKEYS
           </h3>
-          <p className="text-gray-700 leading-relaxed text-sm lg:text-base lg:text-lg mb-5 group-hover:text-gray-900 transition-colors duration-300 dark:text-neutral-200">
+          <p className="text-gray-700 leading-relaxed text-sm lg:text-base lg:text-lg mb-5 group-hover:text-gray-900 transition-colors duration-300 ">
             Established as Real Estate Investment Experts: "NESTKEYS"
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -55,10 +55,10 @@ const AboutHero = () => {
       content: (
         <div>
           
-          <h3 className="text-lg lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-3 group-hover:text-black transition-colors duration-300 leading-tight dark:text-neutral-200">
+          <h3 className="text-lg lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-3 group-hover:text-black transition-colors duration-300 leading-tight ">
             SALES MILESTONE
           </h3>
-          <p className="text-gray-700 leading-relaxed text-sm lg:text-base lg:text-lg mb-5 group-hover:text-gray-900 transition-colors duration-300 dark:text-neutral-200">
+          <p className="text-gray-700 leading-relaxed text-sm lg:text-base lg:text-lg mb-5 group-hover:text-gray-900 transition-colors duration-300 ">
             Asserted dominance with 100+ Gurugram projects sold..
           </p>
 
@@ -99,10 +99,10 @@ const AboutHero = () => {
       title: "2019",
       content: (
         <div>
-          <h3 className="text-lg lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-3 group-hover:text-black transition-colors duration-300 leading-tight dark:text-neutral-200">
+          <h3 className="text-lg lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-3 group-hover:text-black transition-colors duration-300 leading-tight ">
             LAUNCHED SHOPERTYY
           </h3>
-          <p className="text-gray-700 leading-relaxed text-sm lg:text-base lg:text-lg mb-5 group-hover:text-gray-900 transition-colors duration-300 dark:text-neutral-200">
+          <p className="text-gray-700 leading-relaxed text-sm lg:text-base lg:text-lg mb-5 group-hover:text-gray-900 transition-colors duration-300 ">
             Forayed into the Luxury Segment under the Brand Name- Shopertyy.
           </p>
           <div className="grid grid-cols-2 gap-4">
