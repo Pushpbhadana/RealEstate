@@ -55,7 +55,7 @@ const M3MRoute65 = () => {
             "Hospitals & corporates like Artemis, Amex, IBM within 5 km radius"
         ],
 
-        galleryTitle: "The Omaxe State Gallery",
+        galleryTitle: "Gallery",
         galleryItems: [
             {
                 image: galleryImage1,

@@ -55,7 +55,7 @@ const ElanImperial = () => {
             "Situated In Sector 82 Gurgaon Opposite DLF Ultima"
         ],
 
-        galleryTitle: "The Omaxe State Gallery",
+        galleryTitle: "Gallery",
         galleryItems: [
             {
                 image: galleryImage1,

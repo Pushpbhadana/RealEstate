@@ -54,7 +54,7 @@ const M3MAtrium57 = () => {
             "Located near residential neighborhoods, malls, and entertainment areas.",
         ],
 
-        galleryTitle: "The Omaxe State Gallery",
+        galleryTitle: "Gallery",
         galleryItems: [
             {
                 image: galleryImage1,

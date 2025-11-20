@@ -1045,12 +1045,12 @@ const ProjectDetailsPage = ({
       />
 
       {/* CTA Section */}
-      <div className="h-auto lg:h-[calc(70vh-5rem)] mx-2 my-4 sm:m-2 rounded-3xl sm:rounded-4xl bg-gray-400 relative">
+      <div className="h-auto lg:h-[calc(70vh-5rem)] mx-2 my-4 sm:m-2 rounded-3xl sm:rounded-4xl bg-black/100 relative">
         <div
           className="absolute inset-0 bg-cover bg-center rounded-3xl sm:rounded-4xl bg-no-repeat"
           style={{ backgroundImage: `url(${backgroundImage3})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent from-10% via-transparent via-30% to-black/100 rounded-3xl sm:rounded-4xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent from-10% via-transparent via-30% to-blue-200 rounded-3xl sm:rounded-4xl"></div>
         </div>
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center gap-6 lg:gap-8 xl:gap-12 py-8 lg:py-0 px-4 sm:px-6 lg:px-8">
