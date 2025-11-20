@@ -1,10 +1,41 @@
+// pages/Commercial.tsx
 import TiltedCard from '../components/ui/TiltedCard';
 import omxChk from "../assets/images/omxChk.jpg";
 import OmaxeStateImg1 from "../assets/images/omaxeState.png";
-import ElanImperialImg1 from "../assets/images/ELANImperiol.jpg";
-import M3MRoute65Img1 from "../assets/images/m3m65.jpg";
-import M3MAtriumImg1 from "../assets/images/m3m57.jpg";
-import M3MParagonImg1 from "../assets/images/m3mparagon.jpg";
+import useFetch from '@/hooks/useFeatch'; 
+
+// types/commercial-product.ts
+interface CommercialProduct {
+  id: number;
+  documentId: string;
+  captionText: string;
+  description: string;
+  location: string;
+  builder: string;
+  size: string;
+  billStatus: string;
+  projectStatus: string;
+  price: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  image?: any[]; // Changed from imageSrc to image array
+  images?: any;
+  thumbnail?: any;
+  viewDetailsLink?: string; // Added this field
+}
+
+interface ApiResponse {
+  data: CommercialProduct[];
+  meta: {
+    pagination: {
+      page: number;
+      pageSize: number;
+      pageCount: number;
+      total: number;
+    };
+  };
+}
 
 interface CardData {
   imageSrc: string;
@@ -17,8 +48,8 @@ interface CardData {
   billStatus: string;
   projectStatus: string;
   price: string;
-  viewDetailsLink: string; // Added this field
-  contactLink: string; // Added this field for consistency
+  viewDetailsLink: string;
+  contactLink: string;
 }
 
 interface TiltedCardGridProps {
@@ -29,26 +60,19 @@ interface TiltedCardGridProps {
 }
 
 const TiltedCardGrid = ({
-  cards = [
-    {
-      imageSrc: "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      altText: "Kendrick Lamar - GNX Album Cover",
-      captionText: "Kendrick Lamar - GNX",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit in ratione similique doloribus vitae molestiae vero veniam eius, earum excepturi ab atque provident exercitationem nihil sunt, harum itaque. Maiores, aliquid?",
-      location: "Sector 104, Dworka Expressway, Gurgaon",
-      builder: "By Indicbulls",
-      size: "1500 sq.ft",
-      billStatus: "Ready to Move",
-      projectStatus: "Coming Soon",
-      price: "₹1.5 Cr",
-      viewDetailsLink: "/details",
-      contactLink: "/contact"
-    }
-  ],
+  cards = [],
   rotateAmplitude = 12,
   scaleOnHover = 1.01,
   itemsPerRow = 1
 }: TiltedCardGridProps) => {
+  if (cards.length === 0) {
+    return (
+      <div className="min-h-screen w-full flex items-center justify-center">
+        <div className="text-gray-500 text-lg">No projects found</div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen w-full">
       <div className={`
@@ -63,7 +87,7 @@ const TiltedCardGrid = ({
             key={index}
             className="flex flex-col lg:flex-row lg:items-stretch w-full h-full min-h-[500px] bg-white p-6 lg:p-8 rounded-3xl lg:rounded-4xl shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            {/* Image Section - Side by side on tablet/large screens */}
+            {/* Image Section */}
             <div className="lg:flex-1 lg:pr-6 lg:flex lg:items-center lg:justify-center mb-6 lg:mb-0">
               <div className="w-full h-[400px] lg:h-full lg:max-h-[500px]">
                 <TiltedCard
@@ -88,7 +112,7 @@ const TiltedCardGrid = ({
               </div>
             </div>
 
-            {/* Content Section - Side by side on tablet/large screens */}
+            {/* Content Section */}
             <div className="lg:flex-1 flex flex-col justify-between p-5">
               {/* Property Details */}
               <div className="flex-1">
@@ -170,7 +194,7 @@ const TiltedCardGrid = ({
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a 
-                  href={card.viewDetailsLink} // Using the dynamic link from card data
+                  href={card.viewDetailsLink}
                   className='flex-1 px-4 py-3 bg-black text-white text-sm lg:text-base font-medium rounded-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group'
                 > 
                   <span className='truncate'>View Details</span> 
@@ -180,7 +204,7 @@ const TiltedCardGrid = ({
                 </a>
 
                 <a 
-                  href={card.contactLink} // Using the dynamic link from card data
+                  href={card.contactLink}
                   className='flex-1 px-4 py-3 bg-white text-gray-800 text-sm lg:text-base font-medium rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-300 flex items-center justify-center gap-2 group'
                 > 
                   <span className='truncate'>Call Now</span> 
@@ -197,93 +221,82 @@ const TiltedCardGrid = ({
   );
 };
 
+// Helper function to map API data to CardData - FIXED VERSION
+const mapApiDataToCardData = (apiData: CommercialProduct[]): CardData[] => {
+  return apiData.map(product => {
+    // Get image URL from API response
+    let imageUrl = omxChk; // Default fallback image
+    
+    // Check if image array exists and has at least one image
+    if (product.image && product.image.length > 0) {
+      const imageData = product.image[0]; // Get first image from array
+      
+      // Use medium format if available, otherwise use original
+      if (imageData.formats?.medium?.url) {
+        imageUrl = imageData.formats.medium.url;
+      } else if (imageData.url) {
+        imageUrl = imageData.url;
+      }
+    }
+
+    // Use the viewDetailsLink from API if available, otherwise generate one
+    const viewDetailsLink = product.viewDetailsLink || `/${product.captionText.toLowerCase().replace(/\s+/g, '-')}`;
+    
+    return {
+      imageSrc: imageUrl,
+      altText: product.image && product.image[0]?.alternativeText || product.captionText,
+      captionText: product.captionText,
+      description: product.description,
+      location: product.location,
+      builder: product.builder,
+      size: product.size,
+      billStatus: product.billStatus,
+      projectStatus: product.projectStatus,
+      price: product.price.startsWith('₹') ? product.price : `₹${product.price}`,
+      viewDetailsLink: viewDetailsLink,
+      contactLink: "/contact"
+    };
+  });
+};
+
 const Commercial = () => {
-  const commercialProjects = [
+  const { loading, error, data } = useFetch<ApiResponse>('https://classic-melody-c69059d0ad.strapiapp.com/api/commercial-pages?populate=*');
+
+  // Fallback data in case API is not available
+  const fallbackProjects: CardData[] = [
     {
       imageSrc: OmaxeStateImg1,
       altText: "The Omaxe State",
       captionText: "The Omaxe State",
-      description: "This new launch property offers compact units ranging from 50 to 330 square feet, with prices starting from 75 lakhs onwards. These units are available on the ground floor, first floor, and second floor, providing flexible options for prospective buyers.",
+      description: "This new launch property offers compact units ranging from 50 to 330 square feet, with prices starting from 75 lakhs onwards.",
       location: "Sector 19B, Dwarka",
       builder: "By Omaxe",
       size: "50-330 sq.ft",
       billStatus: "New Launch",
       projectStatus: "Under Construction",
       price: "₹75 L+",
-      viewDetailsLink: "/the-omaxe-state",
-      contactLink: "/contact"
-    },
-    {
-      imageSrc: omxChk,
-      altText: "Omaxe Chowk",
-      captionText: "Omaxe Chowk",
-      description: "This newly launched development offers spacious units ranging from 480 to 1340 square feet, with pricing beginning at 1 crore. These premium spaces are conveniently available on the lower ground, ground, first, second, and third floors, offering versatile options for discerning buyers.",
-      location: "Chandni Chowk, Delhi",
-      builder: "By Omaxe",
-      size: "244 sq.ft",
-      billStatus: "New Launch",
-      projectStatus: "Completed",
-      price: "₹67 L+",
-      viewDetailsLink: "/omaxe-chowk",
-      contactLink: "/contact"
-    },
-    {
-      imageSrc: ElanImperialImg1,
-      altText: "Elan Imperial",
-      captionText: "Elan Imperial",
-      description: "This newly launched development offers spacious units ranging from 600 to 3000 square feet, with pricing beginning at 1.5 crores. These premium spaces are conveniently available on the lower ground, ground, first, second, third, and fourth floors, offering versatile options for discerning buyers.",
-      location: "Sector 82, Gurgaon",
-      builder: "Elan Group",
-      size: "600-3000 sq.ft",
-      billStatus: "New Launch",
-      projectStatus: "Under Construction",
-      price: "₹1.5 Cr+",
-      viewDetailsLink: "/elan-imperial",
-      contactLink: "/contact"
-    },
-    {
-      imageSrc: M3MRoute65Img1,
-      altText: "M3M Route 65",
-      captionText: "M3M Route 65",
-      description: "This newly launched development offers spacious units ranging from 480 to 1340 square feet, with pricing beginning at 1 crore. These premium spaces are conveniently available on the lower ground, ground, first, second, and third floors, offering versatile options for discerning buyers.",
-      location: "Sector 65, Gurgaon",
-      builder: "M3M Group",
-      size: "480-1340 sq.ft",
-      billStatus: "Ready to Move",
-      projectStatus: "Completed",
-      price: "₹1 Cr+",
-      viewDetailsLink: "/m3m-route-65",
-      contactLink: "/contact"
-    },
-    {
-      imageSrc: M3MAtriumImg1,
-      altText: "M3M Atrium 57",
-      captionText: "M3M Atrium 57",
-      description: "This new launch property offers compact units ranging from 50 to 330 square feet, with prices starting from 75 lakhs onwards. These units are available on the ground floor, first floor, and second floor, providing flexible options for prospective buyers.",
-      location: "Sector 57, Gurgaon",
-      builder: "M3M Group",
-      size: "500-1450 sq.ft",
-      billStatus: "New Launch",
-      projectStatus: "Under Construction",
-      price: "₹80 L+",
-      viewDetailsLink: "/m3m-atrium-57",
-      contactLink: "/contact"
-    },
-    {
-      imageSrc: M3MParagonImg1,
-      altText: "M3M Paragon",
-      captionText: "M3M Paragon",
-      description: "This newly launched development offers spacious units ranging from 480 to 1340 square feet, with pricing beginning at 1 crore. These premium spaces are conveniently available on the lower ground, ground, first, second, and third floors, offering versatile options for discerning buyers.",
-      location: "Sector 57, Gurgaon",
-      builder: "M3M Group",
-      size: "300-2000 sq.ft",
-      billStatus: "Ready to Move",
-      projectStatus: "Completed",
-      price: "₹80 L+",
-      viewDetailsLink: "/m3m-paragon",
+      viewDetailsLink: "/view-details",
       contactLink: "/contact"
     },
   ];
+
+  // Use API data if available, otherwise use fallback
+  const commercialProjects = data?.data 
+    ? mapApiDataToCardData(data.data) 
+    : fallbackProjects;
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-lg">Loading commercial projects...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    console.error('Error fetching commercial projects:', error);
+    // Continue with fallback data but show error message
+  }
 
   return (
     <>
@@ -320,4 +333,4 @@ const Commercial = () => {
   )
 }
 
-export default Commercial
+export default Commercial;

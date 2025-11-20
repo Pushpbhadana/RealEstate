@@ -1,63 +1,64 @@
 // pages/project1.tsx
 import ProjectDetailsPage from "@/components/Shared/ProjectDetailsPage";
-import project1Image from "../../assets/images/omxChk.jpg";
-import project1Image2 from "../../assets/images/aboutOmexDwarka.webp";
+import project1Image from "../../assets/images/m3mpbanner.jpg";
+import project1Image2 from "../../assets/images/m3mpabout.jpg";
 
-import galleryImage1 from "../../assets/images/OmexDwarkag1.png";
-import galleryImage2 from "../../assets/images/OmexDwarkag2.png";
-import galleryImage3 from "../../assets/images/OmexDwarkag3.png";
-import galleryImage4 from "../../assets/images/OmexDwarkag4.png";
-import galleryImage5 from "../../assets/images/OmexDwarkag5.png";
-import galleryImage6 from "../../assets/images/OmexDwarkag6.png";
-import galleryImage7 from "../../assets/images/OmexDwarkag7.png";
-import galleryImage8 from "../../assets/images/OmexDwarkag8.png";
+import galleryImage1 from "../../assets/images/m3mpg1.jpg";
+import galleryImage2 from "../../assets/images/m3mpg2.jpg";
+import galleryImage3 from "../../assets/images/m3mpg3.jpg";
+import galleryImage4 from "../../assets/images/m3mpg4.jpg";
+import galleryImage5 from "../../assets/images/m3mpg5.jpg";
+import galleryImage6 from "../../assets/images/m3mpg1.jpg";
+import galleryImage7 from "../../assets/images/m3mpg3.jpg";
+import galleryImage8 from "../../assets/images/m3mpg2.jpg";
 
-import premiumImage1 from "../../assets/images/OmexDwarkap1.webp";
-import premiumImage2 from "../../assets/images/OmexDwarkap2.webp";
-import premiumImage3 from "../../assets/images/OmexDwarkap3.webp";
-import premiumImage4 from "../../assets/images/OmexDwarkap4.webp";
+import premiumImage1 from "../../assets/images/m3mpp1.jpg";
+import premiumImage2 from "../../assets/images/m3mpp2.jpg";
+import premiumImage3 from "../../assets/images/m3mpp3.jpg";
+import premiumImage4 from "../../assets/images/m3mpp4.jpg";
 import premiumImage5 from "../../assets/images/OmexDwarkap5.webp";
 import premiumImage6 from "../../assets/images/OmexDwarkap6.webp";
 
 const M3MParagon = () => {
     const projectData = {
-        projectName: "The Omaxe State",
-        location: "Sec 19B, Dwarka, Delhi",
-        tagline: "Luxury Retail Area & Sports Complex",
-        investmentInfo: "Investment Starts @ ₹75 Lacs*",
+        projectName: "M3M Paragon 57",
+        location: "Sector 57, GURUGRAM",
+        tagline: "Hypermarket & Anchor Stores",
+        investmentInfo: "Price Starts at ₹ 80 Lakhs* onwards",
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
-        aboutTitle: "Commercial Complex By Omaxe Dwarka Delhi",
+        aboutTitle: "Invest in M3M Paragon 57",
         features: [
             {
-                title: "Luxury Sports Complex on 50 Acres",
-                description: "50 acres dedicated to upscale commercial sports amenities and facilities."
+                title: "Modern Retail Hub",
+                description: "Four levels of retail space featuring a mix of big brands, niche stores, hypermarkets, and anchor stores."
             },
             {
-                title: "International Cricket-Football Stadium",
-                description: "Premier international venue hosting cricket and football matches."
+                title: "High Footfall",
+                description: "Surrounded by residential areas, educational institutions, and entertainment zones."
             },
             {
-                title: "India's First Integrated Development",
-                description: "A 5-in-1 Integrated Destination Sports, Shopping, Hospitality, Social & Food"
+                title: "Investment Potential",
+                description: "Attracts high-net-worth individuals and corporates, ensuring long-term value appreciation."
             },
             {
-                title: "Project RERA No: DLRERA2024P0003",
+                title: "Project RERA No. GGM/651/383/2022/126",
                 description: "Officially registered and approved project."
             }
         ],
 
-        connectivityTitle: "Robust Connectivity",
+        connectivityTitle: "Location Perks",
         connectivityFeatures: [
-            "Connected to an impressive network of 19 Highways",
-            "Proximity to shopping havens, esteemed educational institutions, and top-notch healthcare facilities.",
-            "Right Opposite to Bharat Vandana Park",
-            "Close to IGI Airports & Dwarka Metro",
-            "Residential catchment of more than 25 Lakhs+ People"
+            '5 mins drive from Golf Course Road.',
+            "Less than a min drive from Golf Course Road Extn.",
+            "10 mins drive from Rajiv Chowk.",
+            "25 mins drive from the International Airport",
+            "Gurgaon’s top commercial property is close to the Golf Course Extension Road and Sohna Road.",
+            // "Located near residential neighborhoods, malls, and entertainment areas.",
         ],
 
-        galleryTitle: "The Omaxe State Gallery",
+        galleryTitle: "Gallery",
         galleryItems: [
             {
                 image: galleryImage1,
