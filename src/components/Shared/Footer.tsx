@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
             <li><a href="/commercial" className="hover:text-white transition">Commercial Projects</a></li>
             <li><a href="/residential" className="hover:text-white transition">Residential Projects</a></li>
             <li><a href="/coming-soon" className="hover:text-white transition">Coming Soon</a></li>
-            <li><a href="/plots" className="hover:text-white transition">Plots</a></li>
+            {/* <li><a href="/plots" className="hover:text-white transition">Plots</a></li> */}
           </ul>
         </nav>
 
