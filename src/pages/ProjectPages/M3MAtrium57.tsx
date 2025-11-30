@@ -26,6 +26,16 @@ const M3MAtrium57 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+        
+        headFeature1: 'Pay 50% And',
+        headFeature1_2: 'Own A Pre-Leased shop',
+        headFeature2: 'Triple Height',
+        headFeature2_2: 'Retail Shops',
+        headFeature3: 'Enjoy',
+        headFeature3_2: '12 Years Lease',
+        headFeature4: '30 Ft. frontage',
+        headFeature4_2: 'With Adjustable Levels',
+
         aboutTitle: "Invest in M3M ATRIUM 57",
         features: [
             {

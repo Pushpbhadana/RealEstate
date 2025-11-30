@@ -18,13 +18,23 @@ import premiumImage6 from "../../assets/images/manesarp1.jpg";
 
 const ComingSoonP5 = () => {
     const projectData = {
-        projectName: "New Launch",
-        location: "Sector-9, Manesar, Gurgaon",
+        projectName: "Sector-9, Manesar, Gurgaon",
+        location: "New Launch",
         tagline: "Studio, Office & Retail Spaces",
         investmentInfo: "2 BHK @ ₹1.50 Cr*.",
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+        
+        headFeature1: 'High Rise',
+        headFeature1_2: 'Development',
+        headFeature2: 'Flexible',
+        headFeature2_2: 'Payment Pans',
+        headFeature3: 'Modular',
+        headFeature3_2: 'Kitchen',
+        headFeature4: 'Option To Choose',
+        headFeature4_2: 'Private Terrace',
+
         aboutTitle: "Discover a Life of Luxury and Comfort",
         features: [
             {

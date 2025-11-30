@@ -28,6 +28,17 @@ const OmaxeChowk = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        
+        headFeature1: 'Payment Plan',
+        headFeature1_2: '50:50',
+        headFeature2: 'Offering Retail Shops',
+        headFeature2_2: 'Restaurants & Food Court',
+        headFeature3: '12% Per Annum',
+        headFeature3_2: 'Till Possession',
+        headFeature4: '3 Years Post Possession',
+        headFeature4_2: 'Lease Guarantee',
+
         aboutTitle: "Commercial Complex By Omaxe Dwarka Delhi",
         features: [
             {

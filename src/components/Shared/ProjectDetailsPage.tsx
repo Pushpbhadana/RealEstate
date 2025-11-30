@@ -743,20 +743,22 @@ const MagicBento: React.FC<MagicBentoProps> = ({
                     enableMagnetism={enableMagnetism}
                     imageSrc={card.imageSrc}
                   >
-                    <div className="card__header flex justify-between gap-3 relative text-white">
-                      <span className="card__label text-base font-bold drop-shadow-2xl bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
-                        {card.label}
-                      </span>
-                    </div>
-                    <div className="card__content flex flex-col relative text-white">
-                      <h3 className={`card__title font-bold text-xl m-0 mb-2 drop-shadow-2xl ${textAutoHide ? 'text-clamp-1' : ''}`}>
-                        {card.title}
-                      </h3>
-                      <p
-                        className={`card__description text-sm leading-6 opacity-95 drop-shadow-2xl ${textAutoHide ? 'text-clamp-2' : ''}`}
-                      >
-                        {card.description}
-                      </p>
+                    <div className="bg-black/50 px-5 py-2 rounded-3xl w-80 ">
+                      <div className="card__header flex justify-between gap-3 relative text-white ">
+                        <span className="card__label text-base font-bold drop-shadow-2xl bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
+                          {card.label}
+                        </span>
+                      </div>
+                      <div className="card__content flex flex-col relative text-white">
+                        <h3 className={`card__title font-bold text-xl m-0 mb-2 drop-shadow-2xl ${textAutoHide ? 'text-clamp-1' : ''}`}>
+                          {card.title}
+                        </h3>
+                        <p
+                          className={`card__description text-sm leading-6 opacity-95 drop-shadow-2xl ${textAutoHide ? 'text-clamp-2' : ''}`}
+                        >
+                          {card.description}
+                        </p>
+                      </div>
                     </div>
                   </ParticleCard>
                 );
@@ -809,6 +811,17 @@ interface ProjectDetailsProps {
   backgroundImage2: string;
   backgroundImage3: string;
 
+
+  // Head Features
+  headFeature1: string;
+  headFeature1_2: string;
+  headFeature2: string;
+  headFeature2_2: string;
+  headFeature3: string;
+  headFeature3_2: string;
+  headFeature4: string;
+  headFeature4_2: string;
+
   // About Section
   aboutTitle: string;
   features: Array<{
@@ -854,6 +867,17 @@ const ProjectDetailsPage = ({
   backgroundImage,
   backgroundImage2,
   backgroundImage3,
+
+  // Head Features
+  headFeature1,
+  headFeature1_2,
+  headFeature2,
+  headFeature2_2,
+  headFeature3,
+  headFeature3_2,
+  headFeature4,
+  headFeature4_2,
+
   aboutTitle,
   features,
   connectivityTitle,
@@ -898,11 +922,11 @@ const ProjectDetailsPage = ({
         <div className="relative z-10 min-h-[calc(90vh-5rem)] flex items-center justify-center p-4 sm:p-6 lg:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between w-full max-w-7xl gap-6 lg:gap-8 xl:gap-16">
             <div className="text-center lg:text-left text-white space-y-4 lg:space-y-6 mt-10 lg:mt-4">
-              <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
-                {projectName}
-              </h1>
-              <h2 className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight">
+              <h1 className="font-semibold text-3xl md:text-4xl lg:text-6xl leading-tight">
                 {location}
+              </h1>
+              <h2 className="text2xl md:text-3xl lg:text-4xl leading-tight">
+                {projectName}
               </h2>
               <p className="text-base text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 {tagline}
@@ -936,6 +960,28 @@ const ProjectDetailsPage = ({
           </div>
         </div>
       </div>
+
+      <div className="w-full min-h-auto mx-2 my-4 mt-5 grid grid-cols-2 md:grid-cols-4 gap-4 md:px-4">
+        <div className="text-center my-3 bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:scale-105 hover:shadow-xl transition">
+          <h5 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800">{headFeature1}</h5>
+          <p className="text-lg text-blue-400 md:text-xl lg:text-2xl mt-2">{headFeature1_2}</p>
+        </div>
+        <div className="text-center my-3 bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:scale-105 hover:shadow-xl transition">
+          <h5 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800">{headFeature2}</h5>
+          <p className="text-lg text-blue-400 md:text-xl lg:text-2xl mt-2">{headFeature2_2}</p>
+        </div>
+        <div className="text-center my-3 bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:scale-105 hover:shadow-xl transition">
+          <h5 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800">{headFeature3}</h5>
+          <p className="text-lg text-blue-400 md:text-xl lg:text-2xl mt-2">{headFeature3_2}</p>
+        </div>
+        <div className="text-center my-3 bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:scale-105 hover:shadow-xl transition">
+          <h5 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800">{headFeature4}</h5>
+          <p className="text-lg text-blue-400 md:text-xl lg:text-2xl mt-2">{headFeature4_2}</p>
+        </div>
+      </div>
+
+      <hr className="w-3/4 mx-auto my-8 h-1 border-0 bg-gray-400 bg-opacity-80 shadow-gray-400 shadow-xl rounded-full" />
+
 
       {/* About Section */}
       <div className="min-h-auto mx-2 my-4">
@@ -1006,7 +1052,7 @@ const ProjectDetailsPage = ({
                           </div>
 
                           {/* Animated gray underline */}
-                          <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gray-400 group-hover:w-full group-hover:left-0 transition-all duration-700 ease-out rounded-full" />
+                          <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gray-400 group-hover:w-full  group-hover:left-0 transition-all duration-700 ease-out rounded-full" />
                         </div>
                       )}
                     </div>
@@ -1226,6 +1272,79 @@ const ProjectDetailsPage = ({
           </div>
         </div>
       </div>
+
+      {/* amanities */}
+      <div className="min-h-auto lg:min-h-[calc(70vh-5rem)] mx-2 my-4 sm:m-2 rounded-3xl sm:rounded-4xl relative p-4 sm:p-2 mb-4 bg-white shadow-xl">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mt-6 lg:mt-10 mb-6 lg:mb-10 tracking-tight text-center">
+          Amenities
+        </h1>
+
+        {/* Cards grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            {
+              name: "Gym",
+              icon: <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            },
+            {
+              name: "Swimming Pool",
+              icon: <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            },
+            {
+              name: "WiFi",
+              icon: <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+              </svg>
+            },
+            {
+              name: "Cafe",
+              icon: <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 3h14a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm0 8h14a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2zm2 4h10m-5 4v-4" />
+              </svg>
+            },
+            {
+              name: "Parking",
+              icon: <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+              </svg>
+            },
+            {
+              name: "Security",
+              icon: <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            },
+            {
+              name: "Lounge",
+              icon: <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20 12H4m16 0l-4-4m4 4l-4 4M4 12l4-4m-4 4l4 4" />
+              </svg>
+            },
+            {
+              name: "Play Area",
+              icon: <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+          ].map((amenity, idx) => (
+            <div
+              key={idx}
+              className="rounded-xl bg-gradient-to-br from-blue-50 to-blue-200 shadow-md p-5 flex flex-col items-center justify-center hover:scale-105 hover:shadow-lg transition"
+            >
+              {/* SVG icon for each card */}
+              <div className="mb-3">
+                {amenity.icon}
+              </div>
+              <span className="text-lg lg:text-xl font-medium text-slate-900 text-center">{amenity.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
     </>
   );
 };

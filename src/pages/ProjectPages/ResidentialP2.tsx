@@ -25,6 +25,16 @@ const ResidentialP2 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+        
+        headFeature1: '3 Twin',
+        headFeature1_2: 'Towers',
+        headFeature2: '2.5 Acres',
+        headFeature2_2: 'Rooftop Club',
+        headFeature3: 'G + 46',
+        headFeature3_2: 'Floors',
+        headFeature4: '14 Acres',
+        headFeature4_2: 'Land Parcel',
+
         aboutTitle: "Replica of Marina Bay Sands Singapore",
         features: [
             {

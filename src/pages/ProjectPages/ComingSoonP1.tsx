@@ -18,13 +18,23 @@ import premiumImage6 from "../../assets/images/ComingSoonP1g3.png";
 
 const ComingSoonP1 = () => {
     const projectData = {
-        projectName: "Price Starts at ₹3.40 Cr*",
+        projectName: "Get Pre-Launch ₹2K Offer*",
         location: "BIRLA PRAVAAH",
         tagline: "3 BHK & 3.5 BHK Ultra-luxury Apartments",
         investmentInfo: "Starting Price ₹ 1.5 cr* Onwards",
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'High Density',
+        headFeature1_2: 'Project',
+        headFeature2: 'Flexible',
+        headFeature2_2: 'Payment Pan',
+        headFeature3: '100+',
+        headFeature3_2: 'Amenities',
+        headFeature4: 'Private',
+        headFeature4_2: 'Terrace',
+
         aboutTitle: "BIRLA Sector 71, Gurugram",
         features: [
             {

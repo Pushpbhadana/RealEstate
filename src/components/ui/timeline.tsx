@@ -38,13 +38,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-full text-center mx-auto pt-20 px-4 md:px-8 lg:px-10">
 
-        <p className="text-lg lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-3 group-hover:text-black transition-colors duration-300 leading-tight ">
-          The Shopertyy Journey
-        </p>
-
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4 ">
-          From Inception to Success
+          The Shopertyy Journey
         </h2>
+
+        <p className="text-lg lg:text-2xl font-bold text-gray-900 mb-2 lg:pt-3 group-hover:text-black transition-colors duration-300 leading-tight ">
+          From Inception to Success
+        </p>
         
       </div>
 

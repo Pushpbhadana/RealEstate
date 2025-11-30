@@ -86,9 +86,9 @@ export const HowWeWork: React.FC = () => {
     <div className="p-6 lg:p-12 xl:p-16 transform transition-all duration-500 overflow-hidden">
       {/* Header Section */}
       <div className="text-center mb-8 lg:mb-16">
-        <span className="text-sm font-medium text-gray-600 uppercase tracking-wider block mb-4">
+        {/* <span className="text-sm font-medium text-gray-600 uppercase tracking-wider block mb-4">
           Our Process
-        </span>
+        </span> */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent leading-tight">
           How We Work
         </h1>

@@ -25,6 +25,17 @@ const ResidentialP3 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'Payment Plan',
+        headFeature1_2: '30:40:30',
+        headFeature2: 'Inguraual Discount',
+        headFeature2_2: 'RS.1000/sq.ft',
+        headFeature3: '101 Amenities To',
+        headFeature3_2: 'Celebrate Life',
+        headFeature4: 'Surrounded by the',
+        headFeature4_2: 'Aravalli foothills',
+
+
         aboutTitle: "M3M GOLF HILLS Sector 79, Gurugram",
         features: [
             {

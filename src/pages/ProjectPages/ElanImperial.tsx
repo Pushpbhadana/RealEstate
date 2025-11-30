@@ -25,6 +25,18 @@ const ElanImperial = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        
+        headFeature1: '1st Mall',
+        headFeature1_2: 'of New Gurgaon',
+        headFeature2: 'Assured Return',
+        headFeature2_2: '12% Onwards',
+        headFeature3: 'Lease Guarantee',
+        headFeature3_2: '9 Years',
+        headFeature4: 'Prime Location',
+        headFeature4_2: 'Adjacent to DLF Gdn. City',
+
+
         aboutTitle: "Studio, Office & RetailELAN IMPERIAL",
         features: [
             {

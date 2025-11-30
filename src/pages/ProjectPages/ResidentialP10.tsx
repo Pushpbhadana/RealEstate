@@ -25,6 +25,16 @@ const ResidentialP10 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'Exclusive',
+        headFeature1_2: '7 Towers',
+        headFeature2: 'Flexible',
+        headFeature2_2: 'Payment Pans',
+        headFeature3: '22 Acres',
+        headFeature3_2: 'Land Parcel',
+        headFeature4: '65% Open & Green',
+        headFeature4_2: 'Area',
+
         aboutTitle: "Signature Global Titanium",
         features: [
             {

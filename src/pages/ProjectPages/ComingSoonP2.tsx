@@ -18,13 +18,23 @@ import premiumImage6 from "../../assets/images/Elanp6.jpg";
 
 const ComingSoonP2 = () => {
     const projectData = {
-        projectName: "ELAN 49",
-        location: "At Sector 49, Gurgoan",
+        projectName: "At Sector 49, Gurgoan",
+        location: "ELAN 49 ",
         tagline: "Starting Price ₹ 10 cr* Onwards",
         investmentInfo: "Coming soon",
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'High-Rise',
+        headFeature1_2: 'of New Gurgaon',
+        headFeature2: 'Assured Return',
+        headFeature2_2: '12% Onwards',
+        headFeature3: 'Land Parcel',
+        headFeature3_2: '6 acres',
+        headFeature4: 'Prime Location',
+        headFeature4_2: '49 Sohna Road, Gurgaon',
+
         aboutTitle: "Studio, Office & Retail",
         features: [
             {

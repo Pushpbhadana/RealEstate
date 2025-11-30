@@ -25,6 +25,16 @@ const ResidentialP14 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: '16 Acres',
+        headFeature1_2: 'Land Parcel',
+        headFeature2: 'G + 31',
+        headFeature2_2: 'Floors',
+        headFeature3: 'Modular Kitchen With',
+        headFeature3_2: 'Premium Fixtures',
+        headFeature4: 'Zero KM',
+        headFeature4_2: 'From Delhi',
+
         aboutTitle: "M3M Crown",
         features: [
             {

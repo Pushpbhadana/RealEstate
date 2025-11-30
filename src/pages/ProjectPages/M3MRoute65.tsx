@@ -25,6 +25,16 @@ const M3MRoute65 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+        
+        headFeature1: 'Payment Plan',
+        headFeature1_2: '50:50',
+        headFeature2: 'Assured Return',
+        headFeature2_2: '12% Onwards',
+        headFeature3: 'Lease Guarantee',
+        headFeature3_2: '3 Years',
+        headFeature4: 'Most Premium Fashion',
+        headFeature4_2: 'Destination of Gurgaon',
+
         aboutTitle: "Invest in M3M Route 65",
         features: [
             {

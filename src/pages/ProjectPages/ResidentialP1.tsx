@@ -25,6 +25,16 @@ const ResidentialP1 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'First Hill Living',
+        headFeature1_2: 'in NCR',
+        headFeature2: '24:76',
+        headFeature2_2: 'Payment Pan',
+        headFeature3: 'Rental Income',
+        headFeature3_2: '9% Onwards',
+        headFeature4: 'Private Basement',
+        headFeature4_2: '& Terrace Space',
+
         aboutTitle: "M3M ANTALYA HILLS Sector 79, Gurugram",
         features: [
             {

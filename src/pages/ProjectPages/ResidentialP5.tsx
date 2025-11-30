@@ -25,6 +25,17 @@ const ResidentialP5 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        
+        headFeature1: '200+',
+        headFeature1_2: 'Amenities',
+        headFeature2: '6+',
+        headFeature2_2: 'Clubhouses',
+        headFeature3: '50000+ Sq. Ft.',
+        headFeature3_2: 'Of Sports Amenities',
+        headFeature4: '5+',
+        headFeature4_2: 'Pools',
+
         aboutTitle: "M3M Altitude at Golf Estate Sec 65, Gruurgram",
         features: [
             {

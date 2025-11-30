@@ -25,6 +25,17 @@ const ResidentialP7 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        
+        headFeature1: 'Payment Plan',
+        headFeature1_2: '35:30:35',
+        headFeature2: 'Full Glass Facade',
+        headFeature2_2: 'Apartment',
+        headFeature3: 'First Movers',
+        headFeature3_2: 'Advantages',
+        headFeature4: '80% Open',
+        headFeature4_2: 'Green Area',
+
         aboutTitle: "PYRAMID ALBAN",
         features: [
             {

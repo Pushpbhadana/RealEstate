@@ -28,6 +28,16 @@ const M3MParagon = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+        
+        headFeature1: 'Get Rental',
+        headFeature1_2: '24% PA*',
+        headFeature2: '9 Years',
+        headFeature2_2: 'Lease Guarantee',
+        headFeature3: '24:76',
+        headFeature3_2: 'Payment Plan',
+        headFeature4: '4 Levels',
+        headFeature4_2: 'Retail Space',
+
         aboutTitle: "Invest in M3M Paragon 57",
         features: [
             {

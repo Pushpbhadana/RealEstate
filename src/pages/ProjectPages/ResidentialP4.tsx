@@ -25,6 +25,16 @@ const ResidentialP4 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: '3 Twin',
+        headFeature1_2: 'Towers',
+        headFeature2: 'Rooftop',
+        headFeature2_2: 'Infinity Pool',
+        headFeature3: 'G + 42',
+        headFeature3_2: 'Floors',
+        headFeature4: '10+ Acres',
+        headFeature4_2: 'Land Parcel',
+
         aboutTitle: "Experience Luxury Living Like Never Before",
         features: [
             {

@@ -25,6 +25,16 @@ const ResidentialP13 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'Payment Plan',
+        headFeature1_2: '25:25:25:25',
+        headFeature2: '12 Acres',
+        headFeature2_2: 'Land Parcel',
+        headFeature3: '24*7 Health Care',
+        headFeature3_2: 'Facilities',
+        headFeature4: '6 Towers',
+        headFeature4_2: 'G+38 Floors',
+
         aboutTitle: "A home for every need & generation",
         features: [
             {

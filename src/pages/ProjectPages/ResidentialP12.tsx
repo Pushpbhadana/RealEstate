@@ -25,6 +25,16 @@ const ResidentialP12 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'Low Rise',
+        headFeature1_2: 'Development',
+        headFeature2: 'Flexible',
+        headFeature2_2: 'Payment Pans',
+        headFeature3: 'Modular',
+        headFeature3_2: 'Kitchen',
+        headFeature4: 'Option To Choose',
+        headFeature4_2: 'Private Terrace',
+
         aboutTitle: "Discover a Life of Luxury and Comfort",
         features: [
             {

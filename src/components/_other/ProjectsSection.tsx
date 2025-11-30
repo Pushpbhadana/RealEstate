@@ -25,7 +25,7 @@ const ProjectsSection = () => {
           {/* Commercial Projects Section */}
           <section className="max-w-7xl mx-auto px-4 mb-16">
             <div className="text-center mb-12">
-              <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">Premium Developments</span>
+              {/* <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">Premium Developments</span> */}
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-4 tracking-tight">
                 Top Commercial Projects
               </h2>
@@ -134,7 +134,7 @@ const ProjectsSection = () => {
           {/* Residential Projects Section */}
           <section className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
-              <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">Luxury Living</span>
+              {/* <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">Luxury Living</span> */}
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-4 tracking-tight">
                 Top Residential Projects
               </h2>

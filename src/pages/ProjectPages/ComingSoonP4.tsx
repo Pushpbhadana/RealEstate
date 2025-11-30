@@ -18,13 +18,23 @@ import premiumImage6 from "../../assets/images/indusbullp6.jpg";
 
 const ComingSoonP4 = () => {
     const projectData = {
-        projectName: "ELAN IMPERIAL",
-        location: "Elan Imperial,Sector 82, Gurgaon",
-        tagline: "Studio, Office & Retail Spaces",
-        investmentInfo: "Starting Price ₹ 1.5 cr* Onwards",
+        projectName: "Dwarka Expressway, Sector 104, Gurugram",
+        location: "Indiabulls",
+        tagline: "Coming Soon",
+        investmentInfo: "2.5 BHK @ ₹1.95 Cr*.",
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'High Rise',
+        headFeature1_2: 'Development',
+        headFeature2: 'Flexible',
+        headFeature2_2: 'Payment Pans',
+        headFeature3: 'Clubhouse',
+        headFeature3_2: 'Luxury',
+        headFeature4: 'Option To Choose',
+        headFeature4_2: 'Private Terrace',
+
         aboutTitle: "Discover a Life of Luxury and Comfort",
         features: [
             {

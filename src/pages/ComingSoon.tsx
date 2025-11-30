@@ -404,8 +404,8 @@ const ComingSoon = () => {
         {/* Content Div - This will appear above the background */}
         <div className="relative z-10 h-full flex items-end justify-center">
           <div className="text-center text-white pb-8">
-            <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight mb-6 text-white">Upcoming Projects</h1>
-            <h2 className="font-extrabold text-3xl md:text-5xl lg:text-6xl leading-tight mb-6 text-white">Coming Soon</h2>
+            {/* <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight mb-6 text-white">Upcoming Projects</h1> */}
+            <h1 className="font-semibold text-3xl md:text-5xl lg:text-7xl leading-tight mb-6 text-white">Coming Soon</h1>
           </div>
         </div>
       </div>

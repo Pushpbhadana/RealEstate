@@ -25,6 +25,16 @@ const ResidentialP6 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+        
+        headFeature1: 'Payment Plan',
+        headFeature1_2: '30:30:40',
+        headFeature2: 'Sunlight',
+        headFeature2_2: 'Facing Balconies',
+        headFeature3: 'Modular Kitchen Along',
+        headFeature3_2: 'With All White Goods',
+        headFeature4: 'First Movers',
+        headFeature4_2: 'Advantages',
+
         aboutTitle: "WHITELAND NEW LAUNCH",
         features: [
             {

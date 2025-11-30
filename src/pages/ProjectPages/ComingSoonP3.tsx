@@ -25,6 +25,16 @@ const ComingSoonP3 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'Massive Clubhouse',
+        headFeature1_2: 'of New Gurgaon',
+        headFeature2: 'Assured Return',
+        headFeature2_2: '12% Onwards',
+        headFeature3: 'Mini Water Park',
+        headFeature3_2: 'Amenities',
+        headFeature4: 'Prime Location',
+        headFeature4_2: 'Sector – 79, GURUGRAM',
+
         aboutTitle: "Aura Pre Launch Gurgaon",
         features: [
             {

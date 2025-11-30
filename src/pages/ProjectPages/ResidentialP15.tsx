@@ -25,6 +25,16 @@ const ResidentialP15 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        headFeature1: 'Wide Large',
+        headFeature1_2: 'Balcony Decks',
+        headFeature2: 'Flexible',
+        headFeature2_2: 'Payment Plans',
+        headFeature3: 'Modular',
+        headFeature3_2: ' Kitchen',
+        headFeature4: 'G + 33',
+        headFeature4_2: 'Floors',
+
         aboutTitle: "Discover a Life of Luxury and Comfort",
         features: [
             {

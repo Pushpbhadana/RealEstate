@@ -25,6 +25,17 @@ const ResidentialP8 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+
+        
+        headFeature1: 'Payment Plan',
+        headFeature1_2: '30:30:40',
+        headFeature2: 'Gold on Spot',
+        headFeature2_2: 'On Every Booking',
+        headFeature3: 'Modular Kitchen With',
+        headFeature3_2: 'Premium Fixtures',
+        headFeature4: 'Zero KM',
+        headFeature4_2: 'From Delhi.',
+
         aboutTitle: "M3M MANSION",
         features: [
             {

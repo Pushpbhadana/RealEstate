@@ -25,6 +25,16 @@ const ResidentialP9 = () => {
         backgroundImage: project1Image,
         backgroundImage2: project1Image2,
         backgroundImage3: '',
+        
+        headFeature1: 'Resort Style Landscape',
+        headFeature1_2: 'With Lagoons.',
+        headFeature2: 'First 24x7 CoWorking',
+        headFeature2_2: 'Space In Delhi NCR.',
+        headFeature3: 'Fully Loaded Apartment',
+        headFeature3_2: 'PWith Modular Kitchen.',
+        headFeature4: 'Observatory Deck with',
+        headFeature4_2: 'city skyline.',
+
         aboutTitle: "Smartworld One DXP",
         features: [
             {
