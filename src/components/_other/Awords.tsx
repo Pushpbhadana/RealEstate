@@ -124,9 +124,9 @@ export const ImageGrid: React.FC = () => {
     <div className="w-full bg-gradient-to-br from-white to-gray-50 rounded-3xl lg:rounded-3xl shadow-2xl p-4 md:p-6 lg:p-8 xl:p-5 transform transition-all duration-500 border-0 lg:border border-gray-200 backdrop-blur-sm overflow-hidden relative">
       {/* Header Section */}
       <div className="text-center mb-8 md:mb-12 lg:mb-16">
-        <span className="text-xs md:text-sm font-medium text-gray-600 uppercase tracking-wider block mb-2 md:mb-4">
+        {/* <span className="text-xs md:text-sm font-medium text-gray-600 uppercase tracking-wider block mb-2 md:mb-4">
           Star Performer for Team
-        </span>
+        </span> */}
         <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent leading-tight">
           Awards & Accolades
         </h1>
