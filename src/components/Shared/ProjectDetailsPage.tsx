@@ -743,7 +743,7 @@ const MagicBento: React.FC<MagicBentoProps> = ({
                     enableMagnetism={enableMagnetism}
                     imageSrc={card.imageSrc}
                   >
-                    <div className="bg-black/50 px-5 py-2 rounded-3xl w-80 ">
+                    <div className="bg-black/70 px-5 py-2 rounded-3xl flex flex-col ">
                       <div className="card__header flex justify-between gap-3 relative text-white ">
                         <span className="card__label text-base font-bold drop-shadow-2xl bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
                           {card.label}
